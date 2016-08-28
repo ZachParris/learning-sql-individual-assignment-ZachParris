@@ -1,0 +1,1 @@
+SELECT FirstName || ' ' || LastName AS "Sales Agent", Invoice.InvoiceId AS "InvoiceId",InvoiceDate, Invoice.* FROM (SELECT * FROM Employee JOIN Customer ON Customer.SupportRepId == Employee.EmployeeId) AS Sales_agent JOIN Invoice ON Invoice.CustomerId == Sales_Agent.CustomerId ORDER BY LastName
