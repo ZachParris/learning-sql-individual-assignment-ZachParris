@@ -1,0 +1,1 @@
+SELECT Playlist.Name AS "PlayList", COUNT(PlaylistTrack.TrackId) AS "Track Count" FROM Playlist JOIN PlaylistTrack ON Playlist.PlaylistId == PlaylistTrack.PlaylistId GROUP BY PlaylistTrack.PlaylistId
